@@ -15,7 +15,7 @@ h1 {
   font-size: 1.8rem;
 }
 
-/* 🔥 Glowing Clock */
+/* 🔥 Clock */
 .clock {
   font-size: 2.5rem;
   margin: 20px 0;
@@ -23,7 +23,7 @@ h1 {
   text-shadow: 0 0 15px #00ffff;
 }
 
-/* 💎 Glass Cards */
+/* 💎 Cards */
 .card {
   background: rgba(255,255,255,0.1);
   margin: 15px auto;
@@ -48,7 +48,7 @@ p {
   font-size: 1.2rem;
 }
 
-/* 📱 Mobile Optimization */
+/* 📱 Mobile */
 @media (max-width: 500px) {
   .clock {
     font-size: 2rem;
