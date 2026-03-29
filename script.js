@@ -2,42 +2,45 @@ function updateTime() {
   const now = new Date();
 
   // 🇧🇩 Bangladesh Time
-  const options = {
+  const time = new Intl.DateTimeFormat("en-US", {
     timeZone: "Asia/Dhaka",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit"
-  };
+  }).format(now);
 
-  const time = new Intl.DateTimeFormat("en-US", options).format(now);
   document.getElementById("time").innerText = time;
 
   // 📅 English Date
-  const engDate = now.toLocaleDateString("en-GB", {
+  const engDate = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Dhaka",
     weekday: "long",
     year: "numeric",
     month: "long",
-    day: "numeric",
-    timeZone: "Asia/Dhaka"
-  });
+    day: "numeric"
+  }).format(now);
+
   document.getElementById("engDate").innerText = engDate;
 
   // 🕌 Hijri Date
-  const hijri = new Intl.DateTimeFormat("en-TN-u-ca-islamic", {
+  const hijriDate = new Intl.DateTimeFormat("en-TN-u-ca-islamic", {
     day: "numeric",
     month: "long",
     year: "numeric"
   }).format(now);
-  document.getElementById("hijriDate").innerText = hijri;
+
+  document.getElementById("hijriDate").innerText = hijriDate;
 
   // 🇧🇩 Bangla Date
-  const bangla = new Intl.DateTimeFormat("bn-BD", {
+  const banglaDate = new Intl.DateTimeFormat("bn-BD", {
     day: "numeric",
     month: "long",
     year: "numeric"
   }).format(now);
-  document.getElementById("banglaDate").innerText = bangla;
+
+  document.getElementById("banglaDate").innerText = banglaDate;
 }
 
+// ⏱️ Update every second
 setInterval(updateTime, 1000);
 updateTime();
