@@ -12,23 +12,32 @@ body {
 
 h1 {
   margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
+/* 🔥 Glowing Clock */
 .clock {
   font-size: 2.5rem;
   margin: 20px 0;
   font-weight: bold;
+  text-shadow: 0 0 15px #00ffff;
 }
 
+/* 💎 Glass Cards */
 .card {
   background: rgba(255,255,255,0.1);
   margin: 15px auto;
-  padding: 15px;
-  border-radius: 15px;
+  padding: 18px;
+  border-radius: 20px;
   width: 90%;
   max-width: 400px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 h2 {
@@ -37,4 +46,15 @@ h2 {
 
 p {
   font-size: 1.2rem;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 500px) {
+  .clock {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
